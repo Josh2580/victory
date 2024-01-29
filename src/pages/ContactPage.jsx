@@ -7,6 +7,7 @@ import {
   FaLinkedinIn,
   FaWhatsapp,
 } from "react-icons/fa";
+import ContactForm from "../components/ContactForm";
 
 const ContactPage = () => {
   // Submit handler for the contact form
@@ -18,29 +19,7 @@ const ContactPage = () => {
   return (
     <Container>
       <Row className="my-5">
-        <Col md={6}>
-          <h2>Contact Us</h2>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter name" required />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" required />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicMessage">
-              <Form.Label>Message</Form.Label>
-              <Form.Control as="textarea" rows={3} required />
-            </Form.Group>
-
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
-        </Col>
+        <ContactForm myWidth={6} />
         <Col md={6}>
           <h2>Our Address</h2>
           <p>1234 Street, City, Country</p>
