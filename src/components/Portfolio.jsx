@@ -1,6 +1,10 @@
 import React from "react";
 import { Card, Row, Col, Container, Button } from "react-bootstrap";
 import PortImg from "../assets/team_img.jpg";
+import EcommerceImg from "../assets/ecommerce_mockup.png";
+import WinoshImg from "../assets/winosh_mockup.png";
+import BannerImg from "../assets/banner.png";
+import BookImg from "../assets/book_cover.jpg";
 
 let style = {
   width: "100%",
@@ -23,21 +27,28 @@ const PortfolioCard = ({ title, category, imageUrl, description }) => (
 const Portfolio = () => {
   const portfolioItems = [
     {
-      title: "Website Design",
-      category: "Websites",
-      imageUrl: PortImg,
+      title: "Ecommerce Website",
+      category: "Website",
+      imageUrl: EcommerceImg,
       description: "A modern and responsive website design.",
     },
     {
-      title: "Corporate Logo",
-      category: "Logos",
-      imageUrl: PortImg,
-      description: "Logo designed for a corporate client.",
+      title: "Informative Website",
+      category: "Website",
+      imageUrl: WinoshImg,
+      description: "A modern and responsive website design.",
     },
     {
       title: "Marketing Graphics",
       category: "Graphics",
-      imageUrl: PortImg,
+      imageUrl: BookImg,
+
+      description: "Creative graphics for marketing campaigns.",
+    },
+    {
+      title: "Marketing Graphics",
+      category: "Graphics",
+      imageUrl: BannerImg,
       description: "Creative graphics for marketing campaigns.",
     },
     // Add more portfolio items as needed

@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Row, Col, Modal, Button } from "react-bootstrap";
 import ServiceImg from "../assets/team_img.jpg";
+import EcommerceImg from "../assets/ecommerce_mockup.png";
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -42,29 +43,44 @@ const Service = () => {
     height: "200px",
     objectFit: "cover",
   };
+
+  const portfolios = [
+    {
+      id: 1,
+      title: "Card Title",
+      sub: [
+        {
+          id: 1,
+          details:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error.",
+        },
+        {
+          id: 2,
+          details:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui repellendus?...",
+        },
+      ],
+      ImgUrl: EcommerceImg,
+    },
+  ];
   return (
     <>
       <h3 className="text-center my-4">Our Services</h3>
       <Row className="g-4" style={{ maxWidth: "100vw" }}>
-        {Array.from({ length: 4 }).map((_, idx) => (
+        {/* {Array.from({ length: 4 }).map((_, idx) => ( */}
+        {portfolios.map((data, idx) => (
           <Col key={idx} xs={12} sm={4} md={4}>
             <Card onClick={() => setModalShow(true)}>
-              <Card.Img variant="top" src={ServiceImg} style={style} />
+              <Card.Img variant="top" src={data.ImgUrl} style={style} />
               <Card.Body>
-                <Card.Title>Card title</Card.Title>
+                <Card.Title>{data.title}:</Card.Title>
                 <Card.Text as="div">
                   <ul>
-                    <li>
-                      <h6 className="d-inline">Sub_Title:</h6> Lorem ipsum dolor
-                      sit amet consectetur adipisicing elit. Nostrum, error.
-                    </li>
-                    <li className="text-truncate">
-                      <span className="d-inline fw-bolder">Sub_Title:</span>
-                      <span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Suscipit labore qui repellendus?...
-                      </span>
-                    </li>
+                    {data.sub.map((val, idx) => (
+                      <li>
+                        <h6 className="d-inline">Sub_Title: {val.details}</h6>
+                      </li>
+                    ))}
                   </ul>
                 </Card.Text>
               </Card.Body>
