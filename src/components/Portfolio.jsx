@@ -39,19 +39,18 @@ const Portfolio = () => {
       description: "A modern and responsive website design.",
     },
     {
-      title: "Marketing Graphics",
+      title: "Book Cover",
       category: "Graphics",
       imageUrl: BookImg,
 
       description: "Creative graphics for marketing campaigns.",
     },
     {
-      title: "Marketing Graphics",
+      title: "Business Bill",
       category: "Graphics",
       imageUrl: BannerImg,
       description: "Creative graphics for marketing campaigns.",
     },
-    // Add more portfolio items as needed
   ];
 
   return (
