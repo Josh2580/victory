@@ -5,7 +5,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Outlet } from "react-router-dom";
 
 function NavbarComp() {
   let expand = "md";
@@ -13,10 +12,12 @@ function NavbarComp() {
     <>
       <Navbar
         key={expand}
-        expand={expand}
         fixed="top"
-        className="bg-body-tertiary mb-3"
-        // bg="danger"
+        expand={expand}
+        variant="primary"
+        className="bg-body-tertiary mb-0"
+        // className="bg-body-tertiary mb-3 shadow-sm"
+        style={{ boxShadow: "0px 4px 6px rgba(54, 54, 54, 0.1)" }}
       >
         <Container fluid="lg">
           <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
@@ -35,36 +36,12 @@ function NavbarComp() {
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/services">Our Services</Nav.Link>
-                <NavDropdown
-                  title="Dropdown"
-                  id={`offcanvasNavbarDropdown-expand-${expand}`}
-                >
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
-                  </NavDropdown.Item>
-                </NavDropdown>
+                <Nav.Link href="/about">About Us</Nav.Link>
               </Nav>
-              <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
-      <>
-        <Outlet />
-      </>
     </>
   );
 }
