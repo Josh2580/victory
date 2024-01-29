@@ -12,7 +12,7 @@ const Root = () => {
         <NavbarComp />
 
         <div className="" style={{ width: "100vw", background: "" }}>
-          <Container fluid="lg" className="w-100">
+          <Container fluid="lg" className="w-100 mt-5 pt-2">
             <Outlet />
           </Container>
         </div>
