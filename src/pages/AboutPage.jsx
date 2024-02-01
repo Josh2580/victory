@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 import WhoWeAre from "./../components/WhoWeAre";
 import Team from "../components/Team";
@@ -9,7 +10,7 @@ import Values from "../components/Values";
 
 const AboutPage = () => {
   return (
-    <div className="">
+    <Container fluid="lg" className="">
       <h3>About Us</h3>
       <WhoWeAre />
       <Team />
@@ -17,7 +18,7 @@ const AboutPage = () => {
       <How />
       <Values />
       <Vission />
-    </div>
+    </Container>
   );
 };
 

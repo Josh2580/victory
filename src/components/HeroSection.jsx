@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Carousel, Container } from "react-bootstrap";
-import HeroImg from "../assets/hero_img.jpg";
+import HeroImgFirst from "../assets/5slide.png";
+import HeroImgSecond from "../assets/2slide.png";
+import HeroImgThird from "../assets/1slide.png";
+import { Button } from "react-bootstrap";
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
@@ -19,21 +22,33 @@ const HeroSection = () => {
     <>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
-          <img src={HeroImg} alt="First slide" style={style} />
+          <img src={HeroImgFirst} alt="First slide" style={style} />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Digital Excellence, Realized</h3>
+            <br />
+
+            <h6>Where Web Development Meets Stunning Design</h6>
+
+            <p style={{ fontSize: "14px" }}>
+              Craft an unforgettable online presence with seamless web
+              development and vibrant graphic design. Elevate your brand today.
+            </p>
+            <br />
+
+            <Button>Explore Our Services</Button>
+            <br />
+            <br />
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img src={HeroImg} alt="Second slide" style={style} />
+          <img src={HeroImgSecond} alt="Second slide" style={style} />
           <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img src={HeroImg} alt="Third slide" style={style} />
+          <img src={HeroImgThird} alt="Third slide" style={style} />
           <Carousel.Caption>
             <h3>Third slide label</h3>
             <p>

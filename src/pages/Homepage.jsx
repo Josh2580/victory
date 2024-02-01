@@ -10,10 +10,12 @@ function Homepage() {
   return (
     <>
       <HeroSection />
-      <WhoWeAre />
-      <Service />
-      <Portfolio />
-      <ContactForm myWidth={12} />
+      <Container fluid="lg">
+        <WhoWeAre />
+        <Service />
+        <Portfolio />
+        <ContactForm myWidth={12} />
+      </Container>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col, Row, Container } from "react-bootstrap";
-import HeroImg from "../assets/hero_img.jpg";
+// import HeroImg from "../assets/hero_img.jpg";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
@@ -45,7 +45,7 @@ const ServicesPage = () => {
     objectFit: "cover",
   };
   return (
-    <div className="">
+    <Container fluid="lg" className="">
       <div>
         <h3>Our Services</h3>
         <p className="">
@@ -58,7 +58,7 @@ const ServicesPage = () => {
           {Array.from({ length: 4 }).map((_, idx) => (
             <Col key={idx} xs={12} sm={4} md={4}>
               <Card onClick={() => setModalShow(true)}>
-                <Card.Img variant="top" src={HeroImg} style={style} />
+                {/* <Card.Img variant="top" src={HeroImg} style={style} /> */}
                 <Card.Body>
                   <Card.Title>Card title</Card.Title>
                   <Card.Text as="div">
@@ -87,7 +87,7 @@ const ServicesPage = () => {
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
-    </div>
+    </Container>
   );
 };
 

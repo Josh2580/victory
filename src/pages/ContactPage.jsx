@@ -17,7 +17,7 @@ const ContactPage = () => {
   };
 
   return (
-    <Container>
+    <Container fluid="lg">
       <Row className="my-5">
         <ContactForm myWidth={6} />
         <Col md={6}>
