@@ -47,7 +47,7 @@ const Service = () => {
   const portfolios = [
     {
       id: 1,
-      title: "Card Title",
+      title: "Web Development",
       sub: [
         {
           id: 1,

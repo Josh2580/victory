@@ -8,15 +8,15 @@ import Portfolio from "../components/Portfolio";
 
 function Homepage() {
   return (
-    <>
+    <div className="d-flex flex-column gap-5">
       <HeroSection />
-      <Container fluid="lg">
+      <Container fluid="lg" className="d-flex flex-column gap-4 ">
         <WhoWeAre />
         <Service />
         <Portfolio />
         <ContactForm myWidth={12} />
       </Container>
-    </>
+    </div>
   );
 }
 

@@ -5,12 +5,9 @@ const Vission = () => {
     <div>
       <h4>Our Vission</h4>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iste,
-        tempore voluptate corporis laboriosam asperiores facilis aperiam est
-        perspiciatis officia tenetur eveniet explicabo. Ad iste fuga facere
-        consequatur itaque aspernatur voluptas rem totam explicabo in
-        repellendus, alias nulla nostrum quidem necessitatibus sapiente tempora
-        .
+        At Winosh Hub, our vision is to be at the forefront of the digital
+        revolution, shaping the future of how businesses and individuals
+        connect, communicate, and thrive in an ever-evolving digital world.
       </p>
     </div>
   );

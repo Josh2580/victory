@@ -16,10 +16,12 @@ const PortfolioCard = ({ title, category, imageUrl, description }) => (
   <Card className="h-100">
     <Card.Img variant="top" src={imageUrl} style={style} />
     <Card.Body>
-      <Card.Title>{title}</Card.Title>
-      <Card.Subtitle className="mb-2 text-muted">{category}</Card.Subtitle>
-      <Card.Text>{description}</Card.Text>
-      <Button variant="primary">View Details</Button>
+      {/* <Card.Title>{title}</Card.Title> */}
+      <Card.Subtitle className="mb-2 text-muted">{title}</Card.Subtitle>
+      <Card.Text style={{ fontSize: "14px", lineHeight: "16px" }}>
+        {description}
+      </Card.Text>
+      {/* <Button variant="primary">View Details</Button> */}
     </Card.Body>
   </Card>
 );
@@ -30,7 +32,8 @@ const Portfolio = () => {
       title: "Ecommerce Website",
       category: "Website",
       imageUrl: EcommerceImg,
-      description: "A modern and responsive website design.",
+      description:
+        "A business website with checkout process and methods of payment.",
     },
     {
       title: "Informative Website",

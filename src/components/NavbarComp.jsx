@@ -14,13 +14,18 @@ function NavbarComp() {
         key={expand}
         fixed="top"
         expand={expand}
-        variant="primary"
-        className="bg-body-tertiary mb-0"
+        // variant="secondary"
+        // className="bg-body-tertiary mb-0"
+        bg="secondary"
         // className="bg-body-tertiary mb-3 shadow-sm"
-        style={{ boxShadow: "0px 4px 6px rgba(54, 54, 54, 0.1)" }}
+        style={{
+          boxShadow: "0px 4px 6px rgba(54, 54, 54, 0.1)",
+          // background: "#101105",
+          // color: "white",
+        }}
       >
         <Container fluid="lg">
-          <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+          <Navbar.Brand href="#">Logo</Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${expand}`}
