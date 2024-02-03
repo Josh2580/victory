@@ -50,7 +50,7 @@ const Service = () => {
   const portfolios = [
     {
       id: 1,
-      title: "Web Development",
+      title: "Graphics Design",
       sub: [
         {
           id: 1,
@@ -67,7 +67,7 @@ const Service = () => {
     },
     {
       id: 2,
-      title: "Web Development",
+      title: "Branding",
       sub: [
         {
           id: 1,
@@ -101,7 +101,7 @@ const Service = () => {
     },
     {
       id: 4,
-      title: "Web Development",
+      title: "UI / UX",
       sub: [
         {
           id: 1,
@@ -118,7 +118,7 @@ const Service = () => {
     },
     {
       id: 5,
-      title: "Web Development",
+      title: "Ecommerce Solutions",
       sub: [
         {
           id: 1,
