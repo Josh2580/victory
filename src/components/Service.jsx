@@ -1,7 +1,10 @@
 import React from "react";
 import { Card, Row, Col, Modal, Button } from "react-bootstrap";
-import ServiceImg from "../assets/team_img.jpg";
-import EcommerceImg from "../assets/ecommerce_mockup.png";
+import EcommerceImg from "../assets/ecommerce.png";
+import GraphicImg from "../assets/graphic-designer.png";
+import UiUxImg from "../assets/UI.png";
+import WebDevImg from "../assets/web-dev.jpeg";
+import BrandImg from "../assets/branding.png";
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -47,6 +50,74 @@ const Service = () => {
   const portfolios = [
     {
       id: 1,
+      title: "Web Development",
+      sub: [
+        {
+          id: 1,
+          details:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error.",
+        },
+        {
+          id: 2,
+          details:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui repellendus?...",
+        },
+      ],
+      ImgUrl: GraphicImg,
+    },
+    {
+      id: 2,
+      title: "Web Development",
+      sub: [
+        {
+          id: 1,
+          details:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error.",
+        },
+        {
+          id: 2,
+          details:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui repellendus?...",
+        },
+      ],
+      ImgUrl: BrandImg,
+    },
+    {
+      id: 3,
+      title: "Web Development",
+      sub: [
+        {
+          id: 1,
+          details:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error.",
+        },
+        {
+          id: 2,
+          details:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui repellendus?...",
+        },
+      ],
+      ImgUrl: WebDevImg,
+    },
+    {
+      id: 4,
+      title: "Web Development",
+      sub: [
+        {
+          id: 1,
+          details:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error.",
+        },
+        {
+          id: 2,
+          details:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui repellendus?...",
+        },
+      ],
+      ImgUrl: UiUxImg,
+    },
+    {
+      id: 5,
       title: "Web Development",
       sub: [
         {
