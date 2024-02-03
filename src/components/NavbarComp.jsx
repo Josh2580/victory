@@ -16,8 +16,8 @@ function NavbarComp() {
         expand={expand}
         // variant="secondary"
         // className="bg-body-tertiary mb-0"
-        bg="secondary"
-        // className="bg-body-tertiary mb-3 shadow-sm"
+        // bg="secondary"
+        className="bg-body-tertiary mb-3 shadow-sm"
         style={{
           boxShadow: "0px 4px 6px rgba(54, 54, 54, 0.1)",
           // background: "#101105",
