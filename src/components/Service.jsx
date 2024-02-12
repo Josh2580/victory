@@ -328,7 +328,7 @@ const Service = () => {
                     <p
                       key={idx}
                       style={{ fontSize: "13px", color: "#2d2d2d" }}
-                      className=" text-truncate p-0 m-0 "
+                      className=" text-truncate py-1 m-0 "
                     >
                       <strong>{val.subHead}: </strong>
                       {val.details}
