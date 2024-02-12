@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Row, Col, Container, Button } from "react-bootstrap";
-import PortImg from "../assets/team_img.jpg";
+import JoImg from "../assets/jochuksImg.png";
 import EcommerceImg from "../assets/ecommerce_mockup.png";
 import WinoshImg from "../assets/winosh_mockup.png";
 import BannerImg from "../assets/banner.png";
@@ -53,7 +53,7 @@ const Portfolio = () => {
     {
       title: "Portfolio Website",
       category: "Website",
-      imageUrl: WinoshImg,
+      imageUrl: JoImg,
       description: "An Informative modern and responsive website design.",
       webUrl: "https://jochuks.netlify.app/",
     },
