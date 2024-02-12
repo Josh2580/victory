@@ -46,7 +46,7 @@ const ServicesPage = () => {
     objectFit: "cover",
   };
   return (
-    <Container fluid="lg" className="">
+    <Container fluid="lg" className="my-4">
       <div>
         <h3>Our Services</h3>
         <p className="">

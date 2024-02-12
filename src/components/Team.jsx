@@ -82,13 +82,16 @@ const Team = () => {
   ];
 
   return (
-    <Row xs={1} sm={2} md={3} lg={4} className="g-5">
-      {teamMembers.map((member, idx) => (
-        <Col key={idx}>
-          <TeamMemberCard member={member} />
-        </Col>
-      ))}
-    </Row>
+    <div className="my-4">
+      <h4 className="text-center pb-3">Team</h4>
+      <Row xs={1} sm={2} md={3} lg={4} className="g-5 ">
+        {teamMembers.map((member, idx) => (
+          <Col key={idx}>
+            <TeamMemberCard member={member} />
+          </Col>
+        ))}
+      </Row>
+    </div>
   );
 };
 

@@ -10,8 +10,8 @@ import Values from "../components/Values";
 
 const AboutPage = () => {
   return (
-    <Container fluid="lg" className="">
-      <h3>About Us</h3>
+    <Container fluid="lg" className="my-4">
+      {/* <h3>About Us</h3> */}
       <WhoWeAre />
       <Team />
       <Mission />

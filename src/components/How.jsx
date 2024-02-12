@@ -2,8 +2,8 @@ import React from "react";
 
 const How = () => {
   return (
-    <div>
-      <h4>How We Do it</h4>
+    <div className=" my-4">
+      <h4 className=" pb-3 text-center">How We Do it</h4>
       <p>
         At Winosh Hub, our approach to creating digital excellence is both an
         art and a science, blending cutting-edge technology with creative

@@ -2,8 +2,8 @@ import React from "react";
 
 const Values = () => {
   return (
-    <div>
-      <h4>Our Values</h4>
+    <div className=" my-4">
+      <h4 className=" pb-3 text-center">Our Values</h4>
       <p>
         At Winosh Hub, our values are the bedrock of our culture, our work, and
         our relationships with clients, partners, and the community. These core

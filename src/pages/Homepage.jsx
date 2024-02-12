@@ -19,8 +19,8 @@ function Homepage() {
         </div>
         <Portfolio />
         <Row>
-          <ContactForm myWidth={6} />
-          <div className=" my-3 mt-md-0">
+          <ContactForm myWidth={4} />
+          <div className=" my-3 mt-md-">
             <ContactInfo />
           </div>
         </Row>
