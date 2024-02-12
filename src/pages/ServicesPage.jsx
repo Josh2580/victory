@@ -3,6 +3,7 @@ import { Card, Col, Row, Container } from "react-bootstrap";
 // import HeroImg from "../assets/hero_img.jpg";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Service from "../components/Service";
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -54,34 +55,7 @@ const ServicesPage = () => {
           dolores incidunt voluptatem nesciunt. Amet inventore cum id hic. Quam
           harum, ratione inventore eveniet sunt facilis voluptates nisi esse.
         </p>{" "}
-        <Row className="g-4" style={{ maxWidth: "100vw" }}>
-          {Array.from({ length: 4 }).map((_, idx) => (
-            <Col key={idx} xs={12} sm={4} md={4}>
-              <Card onClick={() => setModalShow(true)}>
-                {/* <Card.Img variant="top" src={HeroImg} style={style} /> */}
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                  <Card.Text as="div">
-                    <ul>
-                      <li>
-                        <h6 className="d-inline">Sub_Title:</h6> Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Nostrum,
-                        error.
-                      </li>
-                      <li className="text-truncate">
-                        <span className="d-inline fw-bolder">Sub_Title:</span>
-                        <span>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Suscipit labore qui repellendus?...
-                        </span>
-                      </li>
-                    </ul>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+        <Service />
       </div>
       <MyVerticallyCenteredModal
         show={modalShow}

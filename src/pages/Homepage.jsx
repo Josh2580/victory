@@ -5,6 +5,7 @@ import WhoWeAre from "./../components/WhoWeAre";
 import ContactForm from "../components/ContactForm";
 import Service from "../components/Service";
 import Portfolio from "../components/Portfolio";
+import ContactInfo from "../components/ContactInfo";
 
 function Homepage() {
   return (
@@ -14,7 +15,12 @@ function Homepage() {
         <WhoWeAre />
         <Service />
         <Portfolio />
-        <ContactForm myWidth={12} />
+        <Row>
+          <ContactForm myWidth={6} />
+          <div className=" my-3 mt-md-0">
+            <ContactInfo />
+          </div>
+        </Row>
       </Container>
     </div>
   );

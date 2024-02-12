@@ -6,6 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "../custom.css";
+import Logo from "../assets/logo.png";
 
 function NavbarComp() {
   let expand = "md";
@@ -28,8 +29,8 @@ function NavbarComp() {
         }}
       >
         <Container fluid="lg">
-          <Navbar.Brand href="#" className="text-white">
-            Logo
+          <Navbar.Brand href="/" className="text-white">
+            <img src={Logo} alt="LOGO" />
           </Navbar.Brand>
           <Navbar.Toggle
             className="p-1"
@@ -50,7 +51,7 @@ function NavbarComp() {
                 id={`offcanvasNavbarLabel-expand-${expand}`}
                 className="text-white"
               >
-                Offcanvas
+                <img src={Logo} alt="LOGO" />
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
