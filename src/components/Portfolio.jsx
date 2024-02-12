@@ -12,8 +12,15 @@ let style = {
   objectFit: "cover",
 };
 
-const PortfolioCard = ({ title, category, imageUrl, description }) => (
-  <Card className="h-100">
+const VisitHandler = (webUrl) => {
+  // window.location.href = "https://www.example.com";
+  {
+    webUrl && (window.location.href = webUrl);
+  }
+};
+
+const PortfolioCard = ({ title, webUrl, imageUrl, description }) => (
+  <Card className="h-100" onClick={() => VisitHandler(webUrl)}>
     <Card.Img variant="top" src={imageUrl} style={style} />
     <Card.Body>
       {/* <Card.Title>{title}</Card.Title> */}
@@ -34,12 +41,14 @@ const Portfolio = () => {
       imageUrl: EcommerceImg,
       description:
         "A business website with checkout process and methods of payment.",
+      webUrl: "https://joshecommerce.netlify.app/",
     },
     {
       title: "Informative Website",
       category: "Website",
       imageUrl: WinoshImg,
-      description: "A modern and responsive website design.",
+      description: "An Informative modern and responsive website design.",
+      webUrl: "https://winosh.com.ng/",
     },
     {
       title: "Book Cover",
