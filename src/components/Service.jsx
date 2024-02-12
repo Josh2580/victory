@@ -25,13 +25,13 @@ function MyVerticallyCenteredModal(props) {
         {props.data.sub &&
           props.data.sub.map((val, idx) => (
             <p key={idx}>
-              {val.subHead}: {val.details}
+              <strong>{val.subHead}:</strong> {val.details}
             </p>
           ))}
         {props.data.others &&
           props.data.others.map((val, idx) => (
             <p key={idx}>
-              {val.subHead}: {val.details}
+              <strong>{val.subHead}:</strong> {val.details}
             </p>
           ))}
       </Modal.Body>
@@ -259,17 +259,46 @@ const Service = () => {
       sub: [
         {
           id: 1,
-          subHead: "Frontend Development",
+          subHead: "E-commerce Platform Development",
 
           details:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error.",
+            "Building and customizing online store platforms to suit specific business needs.",
         },
         {
           id: 2,
-          subHead: "Frontend Development",
+          subHead: "Shopping Cart Integration",
 
           details:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui repellendus?...",
+            "Implementing and customizing shopping cart functionality for seamless purchase experiences.",
+        },
+      ],
+      others: [
+        {
+          id: 1,
+          subHead: "Payment Gateway Integration",
+          details:
+            "Setting up secure payment processing systems that support various payment methods.",
+        },
+        {
+          id: 2,
+          subHead: "Product Management Systems",
+
+          details:
+            "Creating systems for managing product listings, inventory, and pricing updates efficiently.",
+        },
+        {
+          id: 3,
+          subHead: "E-commerce Analytics",
+
+          details:
+            "Implementing tools to track and analyze customer behavior, sales trends, and website performance to inform business strategies.",
+        },
+        {
+          id: 4,
+          subHead: "Mobile Commerce",
+
+          details:
+            "Optimizing e-commerce websites for mobile devices or developing dedicated mobile shopping apps.",
         },
       ],
       ImgUrl: EcommerceImg,
@@ -296,8 +325,13 @@ const Service = () => {
                 <Card.Title>{data.title}:</Card.Title>
                 <Card.Text as="div" className="">
                   {data.sub.map((val, idx) => (
-                    <p key={idx} className=" text-truncate  ">
-                      {val.subHead}: {val.details}
+                    <p
+                      key={idx}
+                      style={{ fontSize: "13px", color: "#2d2d2d" }}
+                      className=" text-truncate p-0 m-0 "
+                    >
+                      <strong>{val.subHead}: </strong>
+                      {val.details}
                     </p>
                   ))}
                 </Card.Text>
