@@ -18,11 +18,10 @@ function Homepage() {
           <Service />
         </div>
         <Portfolio />
-        <Row>
-          <ContactForm myWidth={4} />
-          <div className=" my-3 mt-md-">
-            <ContactInfo />
-          </div>
+
+        <Row className="my-3">
+          <ContactForm myWidth={6} />
+          {/* <ContactInfo /> */}
         </Row>
       </Container>
     </div>

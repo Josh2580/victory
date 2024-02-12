@@ -8,7 +8,7 @@ const ContactForm = ({ myWidth }) => {
   };
   return (
     <Col md={myWidth}>
-      <h2>Contact Us</h2>
+      <h2 className="text-center">Contact Us</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Name</Form.Label>
