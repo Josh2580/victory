@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Row, Col, Modal, Button } from "react-bootstrap";
 import EcommerceImg from "../assets/ecommerce.png";
 import GraphicImg from "../assets/graphic-designer.png";
@@ -16,20 +16,24 @@ function MyVerticallyCenteredModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          {props.data.title}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Eveniet ipsa blanditiis facere fugiat!
-          Quasi, eveniet! Perspiciatis consequuntur sunt omnis quasi impedit
-          doloribus reprehenderit provident, iste, cupiditate aperiam eum facere
-          a.
-        </p>
+        {/* <h4>Centered Modal</h4> */}
+
+        {props.data.sub &&
+          props.data.sub.map((val, idx) => (
+            <p key={idx}>
+              {val.subHead}: {val.details}
+            </p>
+          ))}
+        {props.data.others &&
+          props.data.others.map((val, idx) => (
+            <p key={idx}>
+              {val.subHead}: {val.details}
+            </p>
+          ))}
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
@@ -40,6 +44,7 @@ function MyVerticallyCenteredModal(props) {
 
 const Service = () => {
   const [modalShow, setModalShow] = React.useState(false);
+  const [serviceID, setServiceID] = useState(1);
 
   let style = {
     width: "100%",
@@ -54,13 +59,45 @@ const Service = () => {
       sub: [
         {
           id: 1,
+          subHead: "Digital Design",
+
           details:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error.",
+            "Creating visuals for digital platforms, including social media graphics and online advertisements",
         },
         {
           id: 2,
+          subHead: "Print Design",
+
           details:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui repellendus?...",
+            "Designing materials for print, such as brochures, posters, and business cards",
+        },
+      ],
+      others: [
+        {
+          id: 1,
+          subHead: "Illustration",
+          details:
+            "Developing hand-drawn or digitally created illustrations for various purposes.",
+        },
+        {
+          id: 2,
+          subHead: "Layout Design",
+
+          details:
+            "Structuring and arranging visual elements for magazines, books, and other publications",
+        },
+        {
+          id: 3,
+          subHead: "Packaging Design",
+
+          details: "Designing the visual appearance of product packaging",
+        },
+        {
+          id: 4,
+          subHead: "Typography",
+
+          details:
+            "Working with fonts and text to enhance visual communication",
         },
       ],
       ImgUrl: GraphicImg,
@@ -71,13 +108,46 @@ const Service = () => {
       sub: [
         {
           id: 1,
+          subHead: "Brand Identity Design",
+
           details:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error.",
+            "Developing the visual elements that represent a brand, including logos, color schemes, and typography",
         },
         {
           id: 2,
+          subHead: "Brand Strategy",
+
           details:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui repellendus?...",
+            "Crafting a comprehensive plan that outlines the brand's values, messaging, and positioning",
+        },
+      ],
+      others: [
+        {
+          id: 1,
+          subHead: "Brand Guidelines",
+          details:
+            "Creating a set of rules and standards for how the brand's visual elements should be used across various platforms",
+        },
+        {
+          id: 2,
+          subHead: "Packaging Design",
+
+          details:
+            "Designing the visual appearance of product packaging to align with the brand identity",
+        },
+        {
+          id: 3,
+          subHead: "Brand Collateral",
+
+          details:
+            "Designing various materials that support the brand, such as business cards, letterheads, and promotional materials",
+        },
+        {
+          id: 4,
+          subHead: "Brand Communication",
+
+          details:
+            "Ensuring consistency in how the brand communicates visually across different mediums",
         },
       ],
       ImgUrl: BrandImg,
@@ -88,15 +158,48 @@ const Service = () => {
       sub: [
         {
           id: 1,
+          subHead: "Frontend Development",
           details:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error.",
+            "Writing code to create the visual elements and user interface of a website that users interact with.",
         },
         {
           id: 2,
+          subHead: "Backend Development",
+
           details:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui repellendus?...",
+            "Building the server-side logic and database functionality that supports the frontend of a website.",
         },
       ],
+      others: [
+        {
+          id: 1,
+          subHead: "Full-Stack Development",
+          details:
+            "Involves both frontend and backend development, covering the entire spectrum of web development.",
+        },
+        {
+          id: 2,
+          subHead: "Responsive Web Design ",
+
+          details:
+            "Ensuring that websites adapt and function well on various devices and screen sizes.",
+        },
+        {
+          id: 3,
+          subHead: "Web Security",
+
+          details:
+            "Implementing measures to protect websites and user data from security threats.",
+        },
+        {
+          id: 4,
+          subHead: "Content Management Systems (CMS)",
+
+          details:
+            "Working with platforms that allow users to easily manage and update website content",
+        },
+      ],
+
       ImgUrl: WebDevImg,
     },
     {
@@ -105,15 +208,49 @@ const Service = () => {
       sub: [
         {
           id: 1,
+          subHead: "User Interface (UI) Design",
+
           details:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error.",
+            "Creating the visual elements of a digital interface, such as buttons, icons, and layout",
         },
         {
           id: 2,
+          subHead: "User Experience (UX) Design",
+
           details:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui repellendus?...",
+            "Focusing on the overall experience of users, including usability, accessibility, and user flow.",
         },
       ],
+      others: [
+        {
+          id: 1,
+          subHead: "Interaction Design",
+          details:
+            "Designing how users interact with the interface, including animations and transitions.",
+        },
+        {
+          id: 2,
+          subHead: "Information Architecture",
+
+          details:
+            "Organizing and structuring content to optimize user navigation and understanding.",
+        },
+        {
+          id: 3,
+          subHead: "Wireframing and Prototyping",
+
+          details:
+            "Creating low-fidelity sketches or interactive prototypes to visualize and test design concepts.",
+        },
+        {
+          id: 4,
+          subHead: "Usability Testing",
+
+          details:
+            "Evaluating the design's effectiveness through user testing and feedback.",
+        },
+      ],
+
       ImgUrl: UiUxImg,
     },
     {
@@ -122,11 +259,15 @@ const Service = () => {
       sub: [
         {
           id: 1,
+          subHead: "Frontend Development",
+
           details:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error.",
         },
         {
           id: 2,
+          subHead: "Frontend Development",
+
           details:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui repellendus?...",
         },
@@ -134,25 +275,31 @@ const Service = () => {
       ImgUrl: EcommerceImg,
     },
   ];
+
+  const found = portfolios.find((val) => val.id == serviceID);
+
+  const ClickHandler = (data) => {
+    setModalShow(true);
+    setServiceID(data.id);
+    // console.log(data);
+  };
+
   return (
     <>
-      <h3 className="text-center my-4">Our Services</h3>
       <Row className="g-4" style={{ maxWidth: "100vw" }}>
         {/* {Array.from({ length: 4 }).map((_, idx) => ( */}
         {portfolios.map((data, idx) => (
           <Col key={idx} xs={12} sm={4} md={4}>
-            <Card onClick={() => setModalShow(true)}>
+            <Card onClick={() => ClickHandler(data)}>
               <Card.Img variant="top" src={data.ImgUrl} style={style} />
               <Card.Body>
                 <Card.Title>{data.title}:</Card.Title>
-                <Card.Text as="div">
-                  <ul>
-                    {data.sub.map((val, idx) => (
-                      <li>
-                        <h6 className="d-inline">Sub_Title: {val.details}</h6>
-                      </li>
-                    ))}
-                  </ul>
+                <Card.Text as="div" className="">
+                  {data.sub.map((val, idx) => (
+                    <p key={idx} className=" text-truncate  ">
+                      {val.subHead}: {val.details}
+                    </p>
+                  ))}
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -160,6 +307,7 @@ const Service = () => {
         ))}
       </Row>
       <MyVerticallyCenteredModal
+        data={found}
         show={modalShow}
         onHide={() => setModalShow(false)}
       />

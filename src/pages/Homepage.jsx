@@ -13,7 +13,10 @@ function Homepage() {
       <HeroSection />
       <Container fluid="lg" className="d-flex flex-column gap-4 ">
         <WhoWeAre />
-        <Service />
+        <div>
+          <h3 className="text-center pb-3">Our Service</h3>
+          <Service />
+        </div>
         <Portfolio />
         <Row>
           <ContactForm myWidth={6} />
