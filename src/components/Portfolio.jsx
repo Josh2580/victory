@@ -51,14 +51,14 @@ const Portfolio = () => {
       webUrl: "https://winosh.com.ng/",
     },
     {
-      title: "Book Cover",
+      title: "Book Cover Design",
       category: "Graphics",
       imageUrl: BookImg,
 
       description: "Creative graphics for marketing campaigns.",
     },
     {
-      title: "Business Bill",
+      title: "Business Bill Design",
       category: "Graphics",
       imageUrl: BannerImg,
       description: "Creative graphics for marketing campaigns.",
