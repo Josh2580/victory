@@ -12,6 +12,7 @@ import {
 const ContactInfo = () => {
   return (
     <Col md={6}>
+      <h3>Our Address</h3>
       <p>1234 Street, City, Country</p>
       <p>Phone: +123456789</p>
       <p>WhatsApp: +123456789</p>

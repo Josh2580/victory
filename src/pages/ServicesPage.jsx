@@ -48,13 +48,16 @@ const ServicesPage = () => {
   return (
     <Container fluid="lg" className="my-4">
       <div>
-        <h3>Our Services</h3>
-        <p className="">
-          <span className="fw-bolder">Short Description for sevice page </span>{" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, ea eos
-          dolores incidunt voluptatem nesciunt. Amet inventore cum id hic. Quam
-          harum, ratione inventore eveniet sunt facilis voluptates nisi esse.
-        </p>{" "}
+        <h3 className="text-center">Our Services</h3>
+        <p className="pb-3">
+          Welcome to JOSHUCAN HUB. In a digital world, making an impact requires
+          precision, creativity, and expertise. That’s where we come in. Our
+          comprehensive suite of digital services—from web development and
+          graphic design to branding and UI/UX—is tailored to bring your vision
+          to life and propel your business forward. Discover how we can
+          transform your online presence and drive real results. Let’s build
+          something great together.
+        </p>
         <Service />
       </div>
       <MyVerticallyCenteredModal

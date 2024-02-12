@@ -51,6 +51,13 @@ const Portfolio = () => {
       webUrl: "https://winosh.com.ng/",
     },
     {
+      title: "Portfolio Website",
+      category: "Website",
+      imageUrl: WinoshImg,
+      description: "An Informative modern and responsive website design.",
+      webUrl: "https://jochuks.netlify.app/",
+    },
+    {
       title: "Book Cover Design",
       category: "Graphics",
       imageUrl: BookImg,
