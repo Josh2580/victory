@@ -26,15 +26,11 @@ const ContactForm = ({ myWidth }) => {
     e.target.reset();
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Implement form submission logic
-  };
   return (
     <Col md={myWidth}>
       <h2 className="text-center">Contact Us</h2>
       <Form ref={form} onSubmit={sendEmail}>
-        <Form.Group className="mb-3" controlId="formBasicName">
+        <Form.Group className="mb-3">
           <Form.Label>Name</Form.Label>
           <Form.Control
             type="text"
@@ -45,7 +41,7 @@ const ContactForm = ({ myWidth }) => {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3">
           <Form.Label>Email address</Form.Label>
           <Form.Control
             type="email"
@@ -56,7 +52,7 @@ const ContactForm = ({ myWidth }) => {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicMessage">
+        <Form.Group className="mb-3">
           <Form.Label>Message</Form.Label>
           <Form.Control
             as="textarea"
