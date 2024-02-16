@@ -1,10 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Form,
+  Button,
+  Card,
+  Spinner,
+} from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = ({ myWidth }) => {
+  const [sending, setSending] = useState(false);
   const form = useRef();
 
   // const sendEmail = (e) => {
@@ -31,6 +40,7 @@ const ContactForm = ({ myWidth }) => {
   const sendEmail = (e) => {
     e.preventDefault();
     const notify = () => toast("Message sent");
+    setSending(true);
 
     emailjs
       .sendForm("service_7tn9qy9", "template_c0boswq", form.current, {
@@ -40,12 +50,14 @@ const ContactForm = ({ myWidth }) => {
         () => {
           console.log("SUCCESS!");
           notify();
+          setSending(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
+          setSending(false);
         }
       );
-    e.target.reset();
+    // e.target.reset();
   };
   return (
     <Col md={myWidth}>
@@ -85,7 +97,16 @@ const ContactForm = ({ myWidth }) => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" disabled={sending}>
+          {sending && (
+            <Spinner
+              as="span"
+              animation="grow"
+              size="sm"
+              role="status"
+              aria-hidden="true"
+            />
+          )}
           Submit
         </Button>
       </Form>
