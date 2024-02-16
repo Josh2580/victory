@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 
@@ -28,6 +30,7 @@ const ContactForm = ({ myWidth }) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const notify = () => toast("Message sent");
 
     emailjs
       .sendForm("service_7tn9qy9", "template_c0boswq", form.current, {
@@ -36,15 +39,18 @@ const ContactForm = ({ myWidth }) => {
       .then(
         () => {
           console.log("SUCCESS!");
+          notify();
         },
         (error) => {
           console.log("FAILED...", error.text);
         }
       );
+    e.target.reset();
   };
   return (
     <Col md={myWidth}>
       <h2 className="text-center">Contact Us</h2>
+      <ToastContainer />
       <Form ref={form} onSubmit={sendEmail}>
         <Form.Group className="mb-3">
           <Form.Label>Name</Form.Label>
