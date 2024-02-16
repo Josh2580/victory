@@ -5,27 +5,43 @@ import emailjs from "@emailjs/browser";
 const ContactForm = ({ myWidth }) => {
   const form = useRef();
 
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_7tn9qy9",
+  //       "",
+  //       form.current,
+  //       ""
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  //   e.target.reset();
+  // };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_iygmfpb",
-        "template_7otzy8y",
-        form.current,
-        "__VX_pxa_16sfWwzn"
-      )
+      .sendForm("service_7tn9qy9", "template_c0boswq", form.current, {
+        publicKey: "__VX_pxa_16sfWwzn",
+      })
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
+          console.log("SUCCESS!");
         },
         (error) => {
-          console.log(error.text);
+          console.log("FAILED...", error.text);
         }
       );
-    e.target.reset();
   };
-
   return (
     <Col md={myWidth}>
       <h2 className="text-center">Contact Us</h2>
@@ -35,7 +51,7 @@ const ContactForm = ({ myWidth }) => {
           <Form.Control
             type="text"
             placeholder="Enter name"
-            name="user_name"
+            name="from_user_name"
             id="username"
             required
           />
@@ -46,7 +62,7 @@ const ContactForm = ({ myWidth }) => {
           <Form.Control
             type="email"
             id="email"
-            name="user_email"
+            name="from_user_email"
             placeholder="Enter email"
             required
           />
