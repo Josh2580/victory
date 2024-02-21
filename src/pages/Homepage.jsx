@@ -6,10 +6,11 @@ import ContactForm from "../components/ContactForm";
 import Service from "../components/Service";
 import Portfolio from "../components/Portfolio";
 import ContactInfo from "../components/ContactInfo";
+import PortImg from "../assets/3slide.png";
 
 function Homepage() {
   return (
-    <div className="d-flex flex-column gap-5">
+    <div className="d-flex flex-column bg-light gap-5">
       <HeroSection />
       <Container fluid="lg" className="d-flex flex-column gap-4 ">
         <WhoWeAre />
@@ -17,8 +18,19 @@ function Homepage() {
           <h3 className="text-center pb-3">Our Service</h3>
           <Service />
         </div>
-        <Portfolio />
+      </Container>
+      <div
+      // style={{
+      //   backgroundImage: `url(${PortImg})`,
+      //   filter: "grayscale(50%)",
+      // }}
+      >
+        <Container>
+          <Portfolio />
+        </Container>
+      </div>
 
+      <Container fluid="lg" id="home_contact">
         <Row className="my-3">
           <ContactForm myWidth={6} />
           {/* <ContactInfo /> */}

@@ -20,7 +20,7 @@ const VisitHandler = (webUrl) => {
 };
 
 const PortfolioCard = ({ title, webUrl, imageUrl, description }) => (
-  <Card className="h-100" onClick={() => VisitHandler(webUrl)}>
+  <Card className="h-100 " onClick={() => VisitHandler(webUrl)}>
     <Card.Img variant="top" src={imageUrl} style={style} />
     <Card.Body>
       {/* <Card.Title>{title}</Card.Title> */}
@@ -73,8 +73,8 @@ const Portfolio = () => {
   ];
 
   return (
-    <Container>
-      <h2 className="text-center my-4">Our Portfolio</h2>
+    <Container className="bg-light">
+      <h2 className="text-center py-4 ">Our Portfolio</h2>
       <Row xs={1} md={2} lg={3} className="g-4">
         {portfolioItems.map((item, idx) => (
           <Col key={idx}>

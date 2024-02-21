@@ -13,13 +13,13 @@ const ContactPage = () => {
 
   return (
     <Container fluid="lg">
-      <Row className="my-5">
+      <Row className="my-5 d-flex flex-column g-4">
         <ContactForm myWidth={6} />
         <ContactInfo />
       </Row>
 
       <Row className="my-5">
-        <Col>
+        {/* <Col>
           <h2>Find Us</h2>
           <div style={{ height: "400px" }}>
             <iframe
@@ -32,7 +32,7 @@ const ContactPage = () => {
               allowFullScreen
             ></iframe>
           </div>
-        </Col>
+        </Col> */}
       </Row>
     </Container>
   );

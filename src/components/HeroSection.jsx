@@ -4,6 +4,7 @@ import HeroImgFirst from "../assets/5slide.png";
 import HeroImgSecond from "../assets/4.png";
 import HeroImgThird from "../assets/1.png";
 import { Button } from "react-bootstrap";
+import { HashLink as Link } from "react-router-hash-link";
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
@@ -36,8 +37,9 @@ const HeroSection = () => {
             graphic design.
           </p>
           <br />
-
-          <Button>Discover How</Button>
+          <Link to="#home_contact" smooth>
+            <Button>Discover How</Button>
+          </Link>
           <br />
           <br />
         </Carousel.Caption>
@@ -54,8 +56,9 @@ const HeroSection = () => {
             resonate and endure.
           </p>
           <br />
-
-          <Button>Begin Your Brand's Transformation</Button>
+          <Link to="#home_contact" smooth>
+            <Button>Begin Your Brand's Transformation</Button>
+          </Link>
           <br />
           <br />
         </Carousel.Caption>
@@ -72,8 +75,9 @@ const HeroSection = () => {
             services. Enhance user experience, engagement, and satisfaction.
           </p>
           <br />
-
-          <Button>Enhance Your User Experience</Button>
+          <Link to="#home_contact" smooth>
+            <Button>Enhance Your User Experience</Button>
+          </Link>
           <br />
           <br />
         </Carousel.Caption>
