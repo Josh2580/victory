@@ -24,7 +24,7 @@ function NavbarComp() {
 
         style={{
           boxShadow: "0px 4px 6px rgba(54, 54, 54, 0.1)",
-          background: "#101105",
+          background: "#18181b",
           // color: "white",
         }}
       >
@@ -43,7 +43,7 @@ function NavbarComp() {
             placement="end"
             // className="bg-primary"
             style={{
-              background: "#101105d1",
+              background: "#212529",
             }}
           >
             <Offcanvas.Header closeButton>
