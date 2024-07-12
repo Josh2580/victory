@@ -15,7 +15,7 @@ let style = {
 const VisitHandler = (webUrl) => {
   // window.location.href = "https://www.example.com";
   {
-    webUrl && (window.location.href = webUrl);
+    webUrl && window.open(webUrl, "_blank");
   }
 };
 

@@ -43,8 +43,8 @@ const ContactForm = ({ myWidth }) => {
     setSending(true);
 
     emailjs
-      .sendForm("service_7tn9qy9", "template_c0boswq", form.current, {
-        publicKey: "__VX_pxa_16sfWwzn",
+      .sendForm("service_9z9pck2", "template_aj1mdut", form.current, {
+        publicKey: "R48oDaG-VEisbDb8L",
       })
       .then(
         () => {
@@ -69,7 +69,7 @@ const ContactForm = ({ myWidth }) => {
           <Form.Control
             type="text"
             placeholder="Enter name"
-            name="from_user_name"
+            name="user_name"
             id="username"
             required
           />
@@ -80,7 +80,7 @@ const ContactForm = ({ myWidth }) => {
           <Form.Control
             type="email"
             id="email"
-            name="from_user_email"
+            name="user_email"
             placeholder="Enter email"
             required
           />
