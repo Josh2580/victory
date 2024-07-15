@@ -1,12 +1,10 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import WhoWeAre from "./../components/WhoWeAre";
 import ContactForm from "../components/ContactForm";
 import Service from "../components/Service";
 import Portfolio from "../components/Portfolio";
-import ContactInfo from "../components/ContactInfo";
-import PortImg from "../assets/3slide.png";
 
 function Homepage() {
   return (
