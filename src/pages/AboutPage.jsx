@@ -13,7 +13,7 @@ const AboutPage = () => {
     <Container fluid="lg" className="my-4">
       {/* <h3>About Us</h3> */}
       <WhoWeAre />
-      <Team />
+      {/* <Team /> */}
       <Mission />
       <How />
       <Values />
