@@ -48,15 +48,15 @@ const ServicesPage = () => {
   return (
     <Container fluid="lg" className="my-4">
       <div>
-        <h3 className="text-center">Our Services</h3>
-        <p className="pb-3">
-          Welcome to JOSHUCAN HUB. In a digital world, making an impact requires
-          precision, creativity, and expertise. That’s where we come in. Our
-          comprehensive suite of digital services—from web development and
-          graphic design to branding and UI/UX—is tailored to bring your vision
-          to life and propel your business forward. Discover how we can
-          transform your online presence and drive real results. Let’s build
-          something great together.
+        <h3 className="text-center pt-4">Our Services</h3>
+        <p className="pb-3 ">
+          Welcome to <span className="font-weight-bold "> Jechify.</span> In a
+          digital world, making an impact requires precision, creativity, and
+          expertise. That’s where we come in. Our comprehensive suite of digital
+          services from web development and graphic design to branding and
+          UI/UX, is tailored to bring your vision to life and propel your
+          business forward. Discover how we can transform your online presence
+          and drive real results. Let’s build something great together.
         </p>
         <Service />
       </div>

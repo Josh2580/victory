@@ -5,10 +5,10 @@ const How = () => {
     <div className=" my-4">
       <h4 className=" pb-3 text-center">How We Do it</h4>
       <p>
-        At Winosh Hub, our approach to creating digital excellence is both an
-        art and a science, blending cutting-edge technology with creative
-        brilliance to deliver solutions that not only look great but perform
-        spectacularly. Here's how we turn your digital dreams into reality:
+        At Jechify, our approach to creating digital excellence is both an art
+        and a science, blending cutting-edge technology with creative brilliance
+        to deliver solutions that not only look great but perform spectacularly.
+        Here's how we turn your digital dreams into reality:
       </p>
       <ul>
         <li>
@@ -52,14 +52,11 @@ const How = () => {
         Partnership & Communication: At the core of our process is a commitment
         to open, honest communication and a true partnership with our clients.
         We keep you informed and involved at every step, ensuring the final
-        product not only meets but exceeds your expectations. At [Your Company
-        Name], this is how we do it: with passion, precision,
-      </p>
-      <p>
-        {" "}
-        and a relentless pursuit of perfection. Our process is designed to
-        ensure your digital presence is not just seen but felt, creating lasting
-        impressions and tangible results.
+        product not only meets but exceeds your expectations. At Jechify, this
+        is how we do it: with passion, precision, and a relentless pursuit of
+        perfection. Our process is designed to ensure your digital presence is
+        not just seen but felt, creating lasting impressions and tangible
+        results.
       </p>
     </div>
   );

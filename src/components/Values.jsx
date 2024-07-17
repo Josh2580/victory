@@ -5,8 +5,8 @@ const Values = () => {
     <div className=" my-4">
       <h4 className=" pb-3 text-center">Our Values</h4>
       <p>
-        At Winosh Hub, our values are the bedrock of our culture, our work, and
-        our relationships with clients, partners, and the community. These core
+        At Jechify, our values are the bedrock of our culture, our work, and our
+        relationships with clients, partners, and the community. These core
         principles guide us in creating digital solutions that not only meet the
         highest standards of excellence but also embody the ethics and
         responsibilities we hold dear. .
@@ -57,10 +57,10 @@ const Values = () => {
         relevant, effective, and innovative solutions.
       </p>
       <p>
-        At Winosh Hub, these values are more than just words—they are the
-        essence of who we are and how we operate. They inspire us to do our best
-        work, to make a difference, and to build a future where technology and
-        design create opportunities for all.
+        At Jechify, these values are more than just words—they are the essence
+        of who we are and how we operate. They inspire us to do our best work,
+        to make a difference, and to build a future where technology and design
+        create opportunities for all.
       </p>
     </div>
   );

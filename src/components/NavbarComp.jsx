@@ -6,10 +6,12 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "../custom.css";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo1.png";
 
 function NavbarComp() {
   let expand = "md";
+
+  let logoStyle = { height: "60px", width: "" };
 
   return (
     <>
@@ -30,11 +32,15 @@ function NavbarComp() {
       >
         <Container fluid="lg">
           <Navbar.Brand href="/" className="text-white">
-            <img src={Logo} alt="LOGO" />
+            <img src={Logo} alt="LOGO" style={logoStyle} />
           </Navbar.Brand>
           <Navbar.Toggle
             className="p-1"
-            style={{ borderColor: "none", background: "white", color: "none" }}
+            style={{
+              borderColor: "none",
+              background: "#633bda80",
+              color: "none",
+            }}
             aria-controls={`offcanvasNavbar-expand-${expand}`}
           />
           <Navbar.Offcanvas
@@ -51,7 +57,7 @@ function NavbarComp() {
                 id={`offcanvasNavbarLabel-expand-${expand}`}
                 className="text-white"
               >
-                <img src={Logo} alt="LOGO" />
+                <img src={Logo} alt="LOGO" style={logoStyle} />
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

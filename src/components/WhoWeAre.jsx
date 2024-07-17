@@ -5,11 +5,9 @@ const WhoWeAre = () => {
     <div>
       <h4 className="pb-2 text-center">About Us</h4>
       <p>
-        At Joshucan Hub, we are more than just a digital services company; we
+        At Jechify Company, we are more than just a digital services company; we
         are innovators, creators, and dreamers committed to redefining the
-        digital landscape. Our mission has been to empower businesses of all
-        sizes—from startups to established enterprises—to thrive in the digital
-        era.
+        digital landscape.
       </p>
       <p>
         With a passionate team of experts in web development, graphic design,
